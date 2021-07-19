@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 2rem;
+  border: 3px solid #d12d2d;
+  background: black;
+  color: whitesmoke;
+  font-family: sans-serif;
+}
+
+.wrapper > * {
+  padding: 1rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: grid;
+  margin: 1rem;
+  gap: 0.3rem;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    "nothing img header"
+    "country img sporting"
+    "country img sporting"
+    "country img sporting"
+    "title img united"
+    "stats img united"
+    "stats img madrid"
+    "stats img madrid"
+    "lines img juve"
+    "info img juve"
+    "info img person";
+}
+
+.wrapper > * {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  grid-area: header;
+  color: #a79797;
+  text-decoration: underline #fff;
+  width: 100%;
+}
+
+.country {
+  grid-area: country;
+  height: 5rem;
+  background-image: url(img/portugal.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.title {
+  grid-area: title;
+  font-size: 23px;
+  display: inline-block;
+  text-align: center;
+}
+
+.title h1 {
+  position: relative;
+}
+
+.rubber {
+  color: #d12d2d;
+}
+
+.rubber2 {
+  color: #337d67;
+}
+
+h1 .rubber {
+  display: inline-block;
+}
+
+h1 .rubber2 {
+  display: inline-block;
+}
+
+h1 .rubber:hover {
+  animation: rubberband 1s;
+}
+
+h1 .rubber2:hover {
+  animation: rubberband 1s;
+}
+
+@keyframes rubberband {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  35% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  45% {
+    transform: scale3d(0.75, 1, 1);
+  }
+  60% {
+    transform: scale3d(1.2, 0.8, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.stats {
+  display: flex;
+  grid-area: stats;
+}
+
+.stats > div {
+  min-width: 70px;
+  min-height: 70px;
+  margin: 1rem;
+  color: whitesmoke;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats p {
+  color: #a79797;
+  text-align: center;
+}
+
+.line {
+  grid-area: lines;
+  width: 4rem;
+  border-top: 2px solid #fff;
+}
+
+.info {
+  align-items: flex-start;
+  grid-area: info;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.img {
+  grid-area: img;
+  height: 100%;
+  width: 100%;
+  background-image: url(img/cr7\ transparent.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.sporting,
+.united,
+.madrid,
+.juve {
+  height: 5rem;
+  width: 100%;
+}
+
+.sporting {
+  grid-area: sporting;
+  background-image: url(img/sporting.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.united {
+  grid-area: united;
+  background-image: url(img/united.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.madrid {
+  grid-area: madrid;
+  background-image: url(img/real\ madrid.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.juve {
+  grid-area: juve;
+  background-image: url(img/juve.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.person {
+  display: flex;
+  grid-area: person;
+}
+
+.person > div {
+  min-width: 50px;
+  min-height: 50px;
+  margin: 2rem;
+  color: whitesmoke;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.person h4 {
+  color: #a79797;
+}
+
+.person p {
+  text-align: center;
+}
+
+/* media queries */
+@media (min-width: 1824px) {
+  .wrapper {
+    height: 100vh;
+  }
+}
